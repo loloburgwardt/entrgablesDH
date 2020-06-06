@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Estos son los mejores actores (rating mas de 8):</h1>
+    <ul>
+        <% actors.forEach(element => { %>
+            <li><a href="/actors/detail/<%= element.id %> "><%= element.first_name %> <%= element.last_name %> - <%= element.rating %></a></li>
+        <% }) %>
+    </ul>
+</body>
+</html>

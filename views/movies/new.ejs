@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Las 5 peliculas mas nuevas son:</h1>
+    <ul>
+        <% movies.forEach(element => { %>
+            <li><a href="/movies/detail/<%= element.id %> "><%= element.title %></a></li>
+        <% }) %>
+    </ul>
+</body>
+</html>

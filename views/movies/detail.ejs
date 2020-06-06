@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1><%= movie.title %></h1>
+    <ul>
+        <li>Rating: <%= movie.rating %></li>
+        <li>Premios: <%= movie.awards %></li>
+        <li>Duracion: <%= movie.length %> minutos</li>
+        <li>Fecha de Lanzamiento: <%= movie.release_date %></li>
+    </ul>
+    <form action="/movies/detail/<%= movie.id %>/edit" method="GET">
+        <button type='submit'>MODIFICAR</button>
+    </form>
+    <form action="/movies/detail/<%= movie.id %>/delete?_method=DELETE" method="POST">
+        <button type='submit'>BORRAR</button>
+    </form>
+</body>
+
+</html>

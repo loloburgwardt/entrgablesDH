@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actors</title>
+</head>
+<body>
+    <h1>Listado de Actores</h1>
+    <ul>
+        <% actorsAll.forEach(actor => { %>
+            <a href="/actors/detail/<%= actor.id %> "><li><%= actor.first_name %> <%= actor.last_name %></li></a>
+        <% }) %>
+    </ul>
+</body>
+</html>
